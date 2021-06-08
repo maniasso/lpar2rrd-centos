@@ -37,9 +37,9 @@ COPY configs/httpd.conf  /etc/httpd/conf/httpd.conf
 
 
 # add product installations
-ENV LPAR_VER_MAJ "7.00"
+ENV LPAR_VER_MAJ "7.11"
 ENV LPAR_VER_MIN ""
-ENV LPAR_SF_DIR "7.00"
+ENV LPAR_SF_DIR "7.11"
 ENV STOR_VER_MAJ "7.00"
 ENV STOR_VER_MIN ""
 ENV STOR_SF_DIR "7.00"
@@ -61,7 +61,8 @@ RUN chmod +x /var/www/cgi-bin/tz.pl
 # ADD http://downloads.sourceforge.net/project/stor2rrd/stor2rrd/$STOR_SF_DIR/stor2rrd-$STOR_VER.tar /home/stor2rrd/
 
 # download tarballs from official website
-ADD https://lpar2rrd.com/download-static/lpar2rrd/lpar2rrd-$LPAR_VER.tar /home/lpar2rrd/
+#ADD https://lpar2rrd.com/download-static/lpar2rrd/lpar2rrd-$LPAR_VER.tar /home/lpar2rrd/
+ADD http://9.45.253.131:8080/install/lpar2rrd-$LPAR_VER.tar /home/lpar2rrd/
 ADD https://stor2rrd.com/download-static/stor2rrd/stor2rrd-$STOR_VER.tar /home/stor2rrd/
 
 # extract tarballs
