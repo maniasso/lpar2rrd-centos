@@ -2,8 +2,8 @@
 #
 # VERSION               1.0
 
-FROM       centos:latest
-MAINTAINER jirka@dutka.net
+FROM       quay.io/centos/centos:latest
+MAINTAINER robfm@br.ibm.com
 
 ENV HOSTNAME XoruX
 ENV VI_IMAGE 1
