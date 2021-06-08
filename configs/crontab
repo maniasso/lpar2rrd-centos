@@ -23,7 +23,7 @@
 0,10,20,30,40,50 * * * * /home/lpar2rrd/lpar2rrd/load_alert.sh > /home/lpar2rrd/lpar2rrd/load_alert.out 2>&1
 
 # Openshift support
-  0,20,40 * * * *  /home/lpar2rrd/lpar2rrd/load_openshift.sh > /home/lpar2rrd/lpar2rrd/load_openshift.out 2>&1
+0,20,40 * * * *  /home/lpar2rrd/lpar2rrd/load_openshift.sh > /home/lpar2rrd/lpar2rrd/load_openshift.out 2>&1
 
 #  STOR2RRD STORAGES
 ######################################################
