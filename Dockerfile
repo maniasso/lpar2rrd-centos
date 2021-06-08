@@ -24,6 +24,7 @@ RUN yum -y clean all
 # setup default user
 RUN groupadd  lpar2rrd 
 RUN adduser  lpar2rrd -g lpar2rrd -u 1005 -s /bin/bash
+RUN usermod -aG lpar2rrd apache
 RUN echo 'lpar2rrd:xorux4you' | chpasswd
 RUN echo '%lpar2rrd ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN mkdir /home/stor2rrd \
